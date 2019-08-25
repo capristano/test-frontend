@@ -1,0 +1,12 @@
+<nz-card [nzTitle]="title">
+    <div cdkDropList [id]="listName" [cdkDropListData]="list" [cdkDropListConnectedTo]="connection"
+        class="task-list" (cdkDropListDropped)="drop($event)">
+        <div class="task-box" *ngFor="let item of list" (click)="onClick(item)" cdkDrag>
+            {{ item.title }}
+            <div *cdkDragPreview class="drag-box">
+                <h3>{{ item.title }}</h3>
+                {{ item.description }}
+            </div>
+        </div>
+    </div>
+</nz-card>

@@ -1,0 +1,13 @@
+.main-content {
+    padding: 30px;
+}
+
+.card-content {
+    margin-bottom: 30px;
+}
+
+.float-action-button {
+    position: fixed; 
+    bottom: 10px; 
+    right: 10px
+}

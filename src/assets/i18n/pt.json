@@ -1,0 +1,24 @@
+{
+    "TASK": {
+        "TYPE_STATUS": {
+            "TODO": "Pendente",
+            "DOING": "Em execução",
+            "DONE": "Concluída"
+        },
+        "TITLE": "Título",
+        "TITLE_PLACEHOLDER": "Informe o título da tarefa",
+        "DESCRIPTION": "Descrição",
+        "DESCRIPTION_PLACEHOLDER": "Informe a descrição da tarefa",
+        "STATUS": "Status",
+        "LAST_UPDATE": "Última alteração"
+    },
+
+    "COMMON": {
+        "YES": "Sim",
+        "NO": "Não",
+        "DELETE_MESSAGE": "Deseja realmente excluir?",
+        "CANCEL": "Cancelar",
+        "DELETE": "Excluir",
+        "SAVE": "Salvar"
+    }
+}
