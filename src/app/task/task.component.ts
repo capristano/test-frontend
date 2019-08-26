@@ -140,18 +140,22 @@ export class TaskComponent implements OnInit {
     if (id !== null) {
       task.id = parseInt(id, 0);
       task.dateChange = this.datePipe.transform(new Date(), 'dd/MM/yyyy HH:mm:ss');
+      this.taskSerive.save(task).subscribe(() => { }, err => {
+        console.log(err);
+      });
       const itemIndex = this.all.findIndex(item => item.id === task.id);
       this.all[itemIndex] = task;
+      this.updateAuxLists();
     } else {
       task.dateCreation = this.datePipe.transform(new Date(), 'dd/MM/yyyy HH:mm:ss');
       this.taskSerive.save(task).subscribe(serverId => {
         task.id = serverId;
+        this.all.push(task);
+        this.updateAuxLists();
       }, err => {
         console.log(err);
       });
-      this.all.push(task);
     }
-    this.updateAuxLists();
     this.clearForm();
     this.onCloseDrawerData();
   }
